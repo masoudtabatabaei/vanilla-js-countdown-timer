@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.d_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.times_inputs {
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.times_inputs input {
+    border: 1px solid #ccc;
+    padding: 15px 10px;
+    border-radius: 5px;
+    margin: 10px 6px;
+}
+
+.btn {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 12px 10px;
+    min-width: 100px;
+    display: inline-block;
+}

@@ -8,7 +8,26 @@
     <link rel='stylesheet' type='text/css' media='screen' href='app.css'>
 </head>
 <body>
-    
+    <div id="main">
+        <div class="d_flex times_inputs">
+            <div>
+                <div class="text_center">Hours</div>
+                <input type="number" id="hours" name="hours" min="0" value="0">
+            </div>
+            <div>
+                <div class="text_center">Minutes</div>
+                <input type="number" id="minutes" name="minutes" min="0" value="5">
+            </div>
+            <div>
+                <div class="text_center">Seconds</div>
+                <input type="number" id="seconds" name="seconds" min="0" value="0">
+            </div>
+        </div>
+        <br>
+        <div class="d-flex">
+            <button class="btn">Start</button>
+        </div>
+    </div>
     <!-- scripts -->
     <script src='app.js'></script>
 </body>

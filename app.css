@@ -35,9 +35,37 @@
 }
 
 .btn {
-    border: 1px solid #ccc;
+    border: none;
+    box-shadow: 0 1px 3px #888;
+    margin: 0 3px;
     border-radius: 6px;
-    padding: 12px 10px;
+    padding: 14px 12px;
     min-width: 100px;
     display: inline-block;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+}
+
+.btn_start {
+    background-color: #00ff00;
+}
+
+.btn_pause_resume {
+    background-color: #6db4f7;
+    display: none;
+}
+
+.btn_stop {
+    background-color: #e42828;
+    color: #fff;
+    display: none;
+}
+
+.btn_reset {
+    background-color: #ffee00;
+    display: none;
 }

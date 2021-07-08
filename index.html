@@ -12,20 +12,23 @@
         <div class="d_flex times_inputs">
             <div>
                 <div class="text_center">Hours</div>
-                <input type="number" id="hours" name="hours" min="0" value="0">
+                <input type="number" id="hours" class="time_input" name="hours" min="0" value="0">
             </div>
             <div>
                 <div class="text_center">Minutes</div>
-                <input type="number" id="minutes" name="minutes" min="0" value="5">
+                <input type="number" id="minutes" class="time_input" name="minutes" min="0" value="5">
             </div>
             <div>
                 <div class="text_center">Seconds</div>
-                <input type="number" id="seconds" name="seconds" min="0" value="0">
+                <input type="number" id="seconds" class="time_input" name="seconds" min="0" value="0">
             </div>
         </div>
         <br>
-        <div class="d-flex">
-            <button class="btn">Start</button>
+        <div class="d_flex">
+            <button class="btn btn_start">Start</button>
+            <button class="btn btn_pause_resume">Pause</button>
+            <button class="btn btn_stop">Stop</button>
+            <button class="btn btn_reset">Reset</button>
         </div>
     </div>
     <!-- scripts -->

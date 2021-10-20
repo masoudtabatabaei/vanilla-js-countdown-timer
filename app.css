@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+.red-text {
+    margin:12px auto;
+    color:#e91414;
+    padding: 6px 0;
+    font-size: 1.1rem;
+}
+
 #main {
     height: 100vh;
     display: flex;

@@ -15,6 +15,7 @@ const btnReset = document.querySelector(".btn_reset");
 
 let interval;
 let isPause = false;
+let message = document.querySelector(".message");
 
 function convertToCurrectValues(totalTimeSeconds) {
     let newSeconds = totalTimeSeconds % 60;
@@ -49,21 +50,28 @@ function getCurrentTotalTime() {
 
 // start timer
 btnStart.addEventListener("click" , (event) => {
+    def_hours = parseInt(hours.value);
+    def_minutes = parseInt(minutes.value);
+    def_seconds = parseInt(seconds.value);  
+
+    totalTimeSeconds = getCurrentTotalTime();
+    if(totalTimeSeconds === 0) {
+        message.innerHTML = "<div class='red-text'>Time is not valid</div>";
+        setTimeout(function(){
+            message.innerHTML = "";
+        } , 2000);
+
+        console.log("^^^^^");
+        return false;
+    }
+
     event.target.style.display = "none";
     btnPause.style.display = "block";
     btnPause.disabled = false;
     btnStop.style.display = "block";
     btnReset.style.display = "block";
 
-    def_hours = parseInt(hours.value);
-    def_minutes = parseInt(minutes.value);
-    def_seconds = parseInt(seconds.value);  
-
-    //console.log("start >> " + "hours : " + def_hours + " minutes : " + def_minutes + " seconds : " + def_seconds);
-
-    totalTimeSeconds = getCurrentTotalTime();
     isPause = false;
-    
     startTimer(totalTimeSeconds);
 });
 

@@ -75,7 +75,15 @@ function startTimer(totalTimeSeconds) {
             updateTimeInputs(totalTimeSeconds);
         } else if (totalTimeSeconds == 0 ) {
             clearInterval(interval);
-            btnPause.disabled = true;
+            // btnPause.disabled = true;
+            document.querySelectorAll(".btn").forEach(btn => {
+                btn.style.display = "none";
+            });
+            
+            btnStart.style.display = "block";
+            document.querySelectorAll(".time_input").forEach(input => {
+                input.disabled = false;
+            });
         }
     } , 1000);
 }

@@ -16,6 +16,24 @@ const btnReset = document.querySelector(".btn_reset");
 let interval;
 let isPause = false;
 
+function convertToCurrectValues(totalTimeSeconds) {
+    let newSeconds = totalTimeSeconds % 60;
+    let newMinutes = Math.floor(totalTimeSeconds / 60);
+    let newHours;
+    if (newMinutes >= 60) {
+        newMinutes = Math.floor(totalTimeSeconds / 60);
+        newHours = totalTimeSeconds % 60;
+    } else {
+        newHours = 0;
+    }
+
+    hours.value = newHours;
+    minutes.value = newMinutes;
+    seconds.value = newSeconds;
+
+    return true;
+}
+
 // get current Total Time by seconds
 function getCurrentTotalTime() {
     let hours_value = parseInt(hours.value);
@@ -23,6 +41,8 @@ function getCurrentTotalTime() {
     let seconds_value = parseInt(seconds.value);
 
     let totalTimeSeconds = (hours_value * 60 * 60) + (minutes_value * 60) + seconds_value;
+
+    convertToCurrectValues(totalTimeSeconds);
 
     return totalTimeSeconds;
 }

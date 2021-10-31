@@ -43,7 +43,7 @@
 
 .btn {
     border: none;
-    box-shadow: 0 1px 3px #888;
+    box-shadow: 0 1px 1px #333;
     margin: 0 3px;
     border-radius: 6px;
     padding: 14px 12px;
@@ -75,4 +75,24 @@
 .btn_reset {
     background-color: #ffee00;
     display: none;
+}
+
+.progressbar_container {
+    position: relative;
+    width: 50%;
+    height: 14px;
+    margin: 45px auto 10px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progressbar_container .progressbar {
+    background-color: rgb(0, 150, 0);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
 }

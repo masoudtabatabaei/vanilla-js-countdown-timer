@@ -95,4 +95,16 @@
     left: 0;
     top: 0;
     bottom: 0;
+    -webkit-transition: width 0.5s ease-in-out , background-color 0.6s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out , background-color 0.6s ease-in-out;
+    -o-transition: width 0.5s ease-in-out , background-color 0.6s ease-in-out;
+    transition: width 0.5s ease-in-out , background-color 0.6s ease-in-out;
+}
+
+.progressbar_container .progressbar.middle {
+    background-color: #ddf508;
+}
+
+.progressbar_container .progressbar.low {
+    background-color: #ff2f2f;
 }

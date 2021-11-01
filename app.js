@@ -16,6 +16,7 @@ const btnReset = document.querySelector(".btn_reset");
 let interval;
 let isPause = false;
 let message = document.querySelector(".message");
+let initialTimeInSeconds;
 
 function convertToCurrectValues(totalTimeSeconds) {
     let newSeconds = totalTimeSeconds % 60;
@@ -44,7 +45,7 @@ function getCurrentTotalTime() {
     let totalTimeSeconds = (hours_value * 60 * 60) + (minutes_value * 60) + seconds_value;
 
     convertToCurrectValues(totalTimeSeconds);
-
+    initialTimeInSeconds = totalTimeSeconds;
     return totalTimeSeconds;
 }
 
@@ -61,7 +62,6 @@ btnStart.addEventListener("click" , (event) => {
             message.innerHTML = "";
         } , 2000);
 
-        console.log("^^^^^");
         return false;
     }
 
@@ -80,6 +80,7 @@ function startTimer(totalTimeSeconds) {
     interval = setInterval(()=>{
         if (totalTimeSeconds > 0 && !isPause) {
             totalTimeSeconds--;
+            handleProgressBar(totalTimeSeconds);
             updateTimeInputs(totalTimeSeconds);
         } else if (totalTimeSeconds == 0 ) {
             clearInterval(interval);
@@ -89,6 +90,7 @@ function startTimer(totalTimeSeconds) {
             });
             
             btnStart.style.display = "block";
+            resetProgressBar();
             document.querySelectorAll(".time_input").forEach(input => {
                 input.disabled = false;
             });
@@ -160,3 +162,19 @@ btnReset.addEventListener("click" , () => {
     totalTimeSeconds = getCurrentTotalTime();
     startTimer(totalTimeSeconds);
 });
+
+function handleProgressBar(totalTimeSeconds) {
+    let progressBarWidth = (totalTimeSeconds * 100) / initialTimeInSeconds;
+    if(progressBarWidth < 80 && progressBarWidth >= 30){
+        document.querySelector(".progressbar").classList.add("middle");
+    } else if (progressBarWidth < 30 ) {
+        document.querySelector(".progressbar").classList.remove("middle");
+        document.querySelector(".progressbar").classList.add("low");
+    }
+    document.querySelector(".progressbar").style.width = `${progressBarWidth}%` ;
+}
+
+function resetProgressBar() {
+    document.querySelector(".progressbar").classList.remove("middle" , "low");
+    document.querySelector(".progressbar").style.width = '100%' ;
+}

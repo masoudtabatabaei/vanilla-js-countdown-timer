@@ -1,5 +1,6 @@
 # Simple Countdown Timer
 
-- developed using <code>Vanilla-js</code>
-- set arbitrary time is format hours/minutes/seconds then start
-- has functionality such as Start / Stop / Resume / Reset
+- Developed using <code>Vanilla-js</code>
+- Set arbitrary time is format hours/minutes/seconds then start
+- Has functionality such as Start / Stop / Resume / Reset
+- There is a progress bar to show better elapsed time!

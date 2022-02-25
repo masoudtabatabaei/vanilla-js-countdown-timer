@@ -138,8 +138,6 @@ btnStop.addEventListener("click" , () => {
     minutes.value = def_minutes;
     seconds.value = def_seconds;
 
-    //console.log("pause >> " + "hours : " + def_hours + " minutes : " + def_minutes + " seconds : " + def_seconds);
-
     timesArr.forEach(element => {
         eval(element).disabled = false;
     });

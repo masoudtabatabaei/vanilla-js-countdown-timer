@@ -104,8 +104,6 @@ function updateTimeInputs(totalTimeSeconds) {
     let minutes_updated = Math.floor(Math.floor(totalTimeSeconds % 3600) / 60);
     let seconds_updated = Math.floor(Math.floor(totalTimeSeconds % 3600) % 60) ;
 
-    //console.log(hours_updated , minutes_updated , seconds_updated);
-
     timesArr.forEach(element => {
         eval(element).disabled = true;
         eval(element).value = eval(element+"_updated");

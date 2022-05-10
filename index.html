@@ -1,43 +1,64 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Countdown Timer</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='app.css'>
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="app.css" />
+  </head>
+  <body>
     <div id="main">
-        <div class="d_flex times_inputs">
-            <div>
-                <div class="text_center">Hours</div>
-                <input type="number" id="hours" class="time_input" name="hours" min="0" value="0">
-            </div>
-            <div>
-                <div class="text_center">Minutes</div>
-                <input type="number" id="minutes" class="time_input" name="minutes" min="0" value="5">
-            </div>
-            <div>
-                <div class="text_center">Seconds</div>
-                <input type="number" id="seconds" class="time_input" name="seconds" min="0" value="0">
-            </div>
+      <div class="d_flex times_inputs">
+        <div>
+          <div class="text_center">Hours</div>
+          <input
+            type="number"
+            id="hours"
+            class="time_input"
+            name="hours"
+            min="0"
+            value="0"
+          />
         </div>
-        <br>
-        <!-- action buttons -->
-        <div class="d_flex">
-            <button class="btn btn_start">Start</button>
-            <button class="btn btn_pause_resume">Pause</button>
-            <button class="btn btn_stop">Stop</button>
-            <button class="btn btn_reset">Reset</button>
+        <div>
+          <div class="text_center">Minutes</div>
+          <input
+            type="number"
+            id="minutes"
+            class="time_input"
+            name="minutes"
+            min="0"
+            value="5"
+          />
         </div>
-        <div class="message"></div>
-        <!-- progress bar -->
-        <div class="progressbar_container">
-            <div class="progressbar"></div>
+        <div>
+          <div class="text_center">Seconds</div>
+          <input
+            type="number"
+            id="seconds"
+            class="time_input"
+            name="seconds"
+            min="0"
+            value="0"
+          />
         </div>
+      </div>
+      <br />
+      <!-- action buttons -->
+      <div class="d_flex">
+        <button class="btn btn_start">Start</button>
+        <button class="btn btn_pause_resume">Pause</button>
+        <button class="btn btn_stop">Stop</button>
+        <button class="btn btn_reset">Reset</button>
+      </div>
+      <div class="message"></div>
+      <!-- progress bar -->
+      <div class="progressbar_container">
+        <div class="progressbar"></div>
+      </div>
     </div>
     <!-- scripts -->
-    <script src='app.js'></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>

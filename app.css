@@ -108,3 +108,12 @@
 .progressbar_container .progressbar.low {
     background-color: #ff2f2f;
 }
+
+.myGithub {
+    display: inline-block;
+    margin-top: 65px;
+}
+
+.myGithub img {
+    max-width: 30px;
+}
